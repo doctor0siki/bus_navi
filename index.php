@@ -12,7 +12,14 @@ use Twig\Loader\FilesystemLoader;
  */
 class getTime
 {
+    /**
+     * WALK_TO_SCHOOL　バス下車後学校までの徒歩時間
+     */
     const WALK_TO_SCHOOL = 5;
+
+    /**
+     * BUS_RIDE バス乗車時間
+     */
     const BUS_RIDE = 8;
 
     /**

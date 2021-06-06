@@ -1,0 +1,100 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"dff88bd1-c961-403f-ba23-4351d919113c\" name=\"Default Changelist\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ComposerSettings\" doNotAsk=\"true\" synchronizationState=\"SYNCHRONIZE\">\r\n    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>\r\n    <execution>\r\n      <executable path=\"composer\" />\r\n    </execution>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"composer.json\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"PhpWorkspaceProjectConfiguration\">\r\n    <include_path>\r\n      <path value=\"$PROJECT_DIR$/vendor/composer\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/event-dispatcher\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/guzzle/guzzle\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/psr/http-message\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/guzzlehttp/psr7\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/guzzlehttp/promises\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/psr/http-client\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/ralouphie/getallheaders\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/guzzlehttp/guzzle\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-ctype\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-mbstring\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/twig/twig\" />\r\n    </include_path>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1svAE5RZIw9JViyZSysSZRlEBTG\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowPanel.toolwindow.highlight.mappings\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowPanel.toolwindow.highlight.symlinks\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowPanel.toolwindow.show.date\" value=\"false\" />\r\n    <property name=\"WebServerToolWindowPanel.toolwindow.show.permissions\" value=\"false\" />\r\n    <property name=\"WebServerToolWindowPanel.toolwindow.show.size\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/../../../../php/php.exe\" />\r\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\r\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\r\n    <property name=\"node.js.path.for.package.eslint\" value=\"project\" />\r\n    <property name=\"node.js.path.for.package.tslint\" value=\"project\" />\r\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\r\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\r\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"Docker\" />\r\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\docto\\PhpstormProjects\\bus_navi\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"dff88bd1-c961-403f-ba23-4351d919113c\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1621742588561</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1621742588561</updated>\r\n      <workItem from=\"1621742589701\" duration=\"1194000\" />\r\n      <workItem from=\"1621743962136\" duration=\"11421000\" />\r\n      <workItem from=\"1621772350922\" duration=\"4969000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"552\" y=\"183\" key=\"#Deployment\" timestamp=\"1621743201685\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1050\" />\r\n    </state>\r\n    <state x=\"552\" y=\"183\" key=\"#Deployment/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050\" timestamp=\"1621743201685\" />\r\n    <state x=\"738\" y=\"437\" width=\"444\" height=\"265\" key=\"ComposerInitDialogKey\" timestamp=\"1621743737578\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1050\" />\r\n    </state>\r\n    <state x=\"738\" y=\"437\" width=\"444\" height=\"265\" key=\"ComposerInitDialogKey/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050\" timestamp=\"1621743737578\" />\r\n    <state x=\"740\" y=\"311\" key=\"FileChooserDialogImpl\" timestamp=\"1621743732961\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1050\" />\r\n    </state>\r\n    <state x=\"740\" y=\"311\" key=\"FileChooserDialogImpl/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050\" timestamp=\"1621743732961\" />\r\n    <state x=\"794\" y=\"448\" key=\"NewPhpFileDialog\" timestamp=\"1621742606050\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1050\" />\r\n    </state>\r\n    <state x=\"794\" y=\"448\" key=\"NewPhpFileDialog/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050\" timestamp=\"1621742606050\" />\r\n    <state x=\"-2449\" y=\"34\" width=\"1258\" height=\"753\" key=\"dock-window-1\" timestamp=\"1621770678452\">\r\n      <screen x=\"-2560\" y=\"-349\" width=\"1707\" height=\"940\" />\r\n    </state>\r\n    <state x=\"955\" y=\"211\" width=\"1258\" height=\"753\" key=\"dock-window-1/-2560.-349.1707.940/0.0.1920.1050@-2560.-349.1707.940\" timestamp=\"1621766811552\" />\r\n    <state x=\"-2449\" y=\"34\" width=\"1258\" height=\"753\" key=\"dock-window-1/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050\" timestamp=\"1621770678452\" />\r\n    <state x=\"770\" y=\"255\" key=\"ftp.server.browser\" timestamp=\"1621742829601\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1050\" />\r\n    </state>\r\n    <state x=\"770\" y=\"255\" key=\"ftp.server.browser/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050\" timestamp=\"1621742829601\" />\r\n    <state x=\"1240\" y=\"276\" key=\"run.anything.popup\" timestamp=\"1621769027499\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1050\" />\r\n    </state>\r\n    <state x=\"1240\" y=\"276\" key=\"run.anything.popup/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050\" timestamp=\"1621769027499\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"php\">\r\n          <url>file://$PROJECT_DIR$/template/index.html.twig</url>\r\n          <line>41</line>\r\n          <option name=\"timeStamp\" value=\"4\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"php\">\r\n          <url>file://$PROJECT_DIR$/template/index.html.twig</url>\r\n          <line>34</line>\r\n          <option name=\"timeStamp\" value=\"5\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 1cf1acecb291d0efe4910c4edbff6bdd647e4793)
++++ .idea/workspace.xml	(date 1622966970699)
+@@ -1,7 +1,27 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="BranchesTreeState">
++    <expand>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++    </expand>
++    <select />
++  </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="dff88bd1-c961-403f-ba23-4351d919113c" name="Default Changelist" comment="" />
++    <list default="true" id="dff88bd1-c961-403f-ba23-4351d919113c" name="Default Changelist" comment="first commit">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -19,6 +39,9 @@
+         <option value="composer.json" />
+       </list>
+     </option>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="PhpWorkspaceProjectConfiguration">
+     <include_path>
+@@ -76,12 +99,36 @@
+       <workItem from="1621742589701" duration="1194000" />
+       <workItem from="1621743962136" duration="11421000" />
+       <workItem from="1621772350922" duration="4969000" />
++      <workItem from="1622966337960" duration="627000" />
++    </task>
++    <task id="LOCAL-00001" summary="first commit">
++      <created>1622966439813</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1622966439813</updated>
+     </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="first commit" />
++    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
++  </component>
+   <component name="WindowStateProjectService">
+     <state x="552" y="183" key="#Deployment" timestamp="1621743201685">
+       <screen x="0" y="0" width="1920" height="1050" />
+@@ -99,6 +146,14 @@
+       <screen x="0" y="0" width="1920" height="1050" />
+     </state>
+     <state x="794" y="448" key="NewPhpFileDialog/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050" timestamp="1621742606050" />
++    <state x="706" y="261" key="Vcs.Push.Dialog.v2" timestamp="1622966704218">
++      <screen x="0" y="0" width="1920" height="1050" />
++    </state>
++    <state x="706" y="261" key="Vcs.Push.Dialog.v2/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050" timestamp="1622966704218" />
++    <state x="932" y="262" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1622966371922">
++      <screen x="0" y="0" width="1920" height="1050" />
++    </state>
++    <state x="932" y="262" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050" timestamp="1622966371922" />
+     <state x="-2449" y="34" width="1258" height="753" key="dock-window-1" timestamp="1621770678452">
+       <screen x="-2560" y="-349" width="1707" height="940" />
+     </state>

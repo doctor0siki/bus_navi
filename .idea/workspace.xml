@@ -23,7 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dff88bd1-c961-403f-ba23-4351d919113c" name="Default Changelist" comment="もろもろ">
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +98,7 @@
       <workItem from="1622967174902" duration="10000" />
       <workItem from="1622967388712" duration="379000" />
       <workItem from="1622967800783" duration="4000" />
-      <workItem from="1622967839132" duration="413000" />
+      <workItem from="1622967839132" duration="462000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1622966439813</created>
@@ -133,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622968119822</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="もろもろ">
+      <created>1622968274890</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1622968274890</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,10 +185,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="468" y="170" key="SettingsEditor/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050" timestamp="1622967768902" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1622968121430">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1622968281931">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050" timestamp="1622968121430" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050" timestamp="1622968281931" />
     <state x="846" y="255" key="ftp.server.browser" timestamp="1622968250731">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

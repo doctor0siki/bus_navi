@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5e72a680-6da1-4649-90fe-7dd12edd81a8" name="xserver" url="http://sv5.php.xdomain.ne.jp">
+        <fileTransfer host="sv5.php.xdomain.ne.jp" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="80105efe-d8b6-4150-b050-a80500ce40ba" name="xfree" url="http://doctor.php.xdomain.jp">
+        <fileTransfer accessType="LOCAL" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>

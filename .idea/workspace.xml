@@ -22,9 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dff88bd1-c961-403f-ba23-4351d919113c" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_06_06_17_11__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_06_06_17_11__Default_Changelist_.xml" afterDir="false" />
+    <list default="true" id="dff88bd1-c961-403f-ba23-4351d919113c" name="Default Changelist" comment="もろもろ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,6 +60,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
@@ -97,6 +96,7 @@
       <workItem from="1622967174902" duration="10000" />
       <workItem from="1622967388712" duration="379000" />
       <workItem from="1622967800783" duration="4000" />
+      <workItem from="1622967839132" duration="413000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1622966439813</created>
@@ -126,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622967529748</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="もろもろ">
+      <created>1622968119822</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1622968119822</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,9 +156,18 @@
     <MESSAGE value="igonre" />
     <MESSAGE value="2" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="もろもろ" />
+    <option name="LAST_COMMIT_MESSAGE" value="もろもろ" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="183" key="#Deployment" timestamp="1622968254681">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="183" key="#Deployment/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050" timestamp="1622968254681" />
+    <state x="638" y="206" key="#Options" timestamp="1622968227396">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="638" y="206" key="#Options/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050" timestamp="1622968227396" />
     <state x="738" y="437" width="444" height="265" key="ComposerInitDialogKey" timestamp="1622967410163">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -160,9 +176,13 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="468" y="170" key="SettingsEditor/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050" timestamp="1622967768902" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1622967534749">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1622968121430">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050" timestamp="1622967534749" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050" timestamp="1622968121430" />
+    <state x="846" y="255" key="ftp.server.browser" timestamp="1622968250731">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="846" y="255" key="ftp.server.browser/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050" timestamp="1622968250731" />
   </component>
 </project>

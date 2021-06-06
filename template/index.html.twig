@@ -1,0 +1,152 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="apple-touch-icon" href="https://tokyu.bus-location.jp/blsys/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <title>バスナビ</title>
+    <style>* {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+        }</style>
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Refresh" content="15">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-color: black;
+        }
+        h1 {
+            font-size: 160px;
+            color: #2a722a;
+            font-family: 'DotGothic16', sans-serif;
+        }
+
+        h2 {
+            color:orange;
+            font-size: 60px;
+            font-family: 'DotGothic16', sans-serif;
+        }
+
+        h3 {
+            color:orange;
+            font-size: 40px;
+            color: black;
+            font-family: 'DotGothic16', sans-serif;
+        }
+
+        div {
+            color:orange;
+            font-size: 30px;
+            font-family: 'DotGothic16', sans-serif;
+        }
+
+        a {
+            font-size: 10px;
+            color: #fff;
+            background: #5876a3;
+            padding: 10px 30px;
+            display: inline-block;
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: 'DotGothic16', sans-serif;
+        }
+    </style>
+<body>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <a href="https://tokyu.bus-location.jp/blsys/navis?VID=rsl&EID=nt&PRM=&SCT=1&DSMK=2427&DSN=%E4%B8%96%E7%94%B0%E8%B0%B7%E8%AD%A6%E5%AF%9F%E7%BD%B2%E5%89%8D&ASMK=0&ASN=null&FDSN=0&FASN=0&RAMK=1"
+               target="_blank">バスナビ</a>
+        </div>
+    </div>
+    <br>
+    {% if bus_info[0].time=="" %}
+    <div class="row">
+        <div class="col-md-12">
+            次のバスは
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center"><h1>未定です</h1></div>
+    </div>
+    {% else %}
+    <div class="row">
+        <div class="col-md-12">
+            次のバスは
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-left">あと</div>
+    </div>
+    <div class="row">
+        <div class="col text-center"><h1>
+                {% if  bus_info[0].time == 0 %}
+                    まもなく
+                {% else %}
+                    {{ bus_info[0].time }}分で
+                {% endif %}
+            </h1></div>
+    </div>
+    <div class="row">
+        <div class="col text-right">発車します</div>
+    </div>
+    <div class="row">
+        <div class="col text-center"><h2>{{ bus_info[0].departure }}発→{{ bus_info[0].arrival }}学校着</h2></div>
+    </div>
+        {% if  bus_info[0].time > 8%}
+            <div class="row">
+                <div class="col text-center">PASMO、マスク、ハンカチちり紙、健康観察表OK？</div>
+            </div>
+    {% elseif bus_info[0].time <= 8 and  bus_info[0].time >= 6 %}
+        <div class="row">
+            <div class="col text-center">そろそろ家を出ましょう</div>
+        </div>
+    {% elseif bus_info[0].time <=5 %}
+        <div class="row">
+            <div class="col text-center">次のバスを待ちましょう</div>
+        </div>
+    {% endif %}
+    {% if bus_info[1]!="" %}
+        <hr>
+        <div class="row">
+            <div class="col text-left">
+                その次のバスは、あと
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <h2>{{ bus_info[1].time }}分で</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-right">
+                発車します
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                {{ bus_info[1].departure }}発→{{ bus_info[1].arrival }}学校着
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endif %}
+</body>
+</html>
+

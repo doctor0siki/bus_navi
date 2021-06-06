@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dff88bd1-c961-403f-ba23-4351d919113c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="composer.json" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/guzzle/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1svAE5RZIw9JViyZSysSZRlEBTG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../php/php.exe" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Docker" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\docto\PhpstormProjects\bus_navi" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dff88bd1-c961-403f-ba23-4351d919113c" name="Default Changelist" comment="" />
+      <created>1621742588561</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621742588561</updated>
+      <workItem from="1621742589701" duration="1194000" />
+      <workItem from="1621743962136" duration="11421000" />
+      <workItem from="1621772350922" duration="4969000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="183" key="#Deployment" timestamp="1621743201685">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="183" key="#Deployment/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050" timestamp="1621743201685" />
+    <state x="738" y="437" width="444" height="265" key="ComposerInitDialogKey" timestamp="1621743737578">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="738" y="437" width="444" height="265" key="ComposerInitDialogKey/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050" timestamp="1621743737578" />
+    <state x="740" y="311" key="FileChooserDialogImpl" timestamp="1621743732961">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="311" key="FileChooserDialogImpl/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050" timestamp="1621743732961" />
+    <state x="794" y="448" key="NewPhpFileDialog" timestamp="1621742606050">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="794" y="448" key="NewPhpFileDialog/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050" timestamp="1621742606050" />
+    <state x="-2449" y="34" width="1258" height="753" key="dock-window-1" timestamp="1621770678452">
+      <screen x="-2560" y="-349" width="1707" height="940" />
+    </state>
+    <state x="955" y="211" width="1258" height="753" key="dock-window-1/-2560.-349.1707.940/0.0.1920.1050@-2560.-349.1707.940" timestamp="1621766811552" />
+    <state x="-2449" y="34" width="1258" height="753" key="dock-window-1/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050" timestamp="1621770678452" />
+    <state x="770" y="255" key="ftp.server.browser" timestamp="1621742829601">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="770" y="255" key="ftp.server.browser/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050" timestamp="1621742829601" />
+    <state x="1240" y="276" key="run.anything.popup" timestamp="1621769027499">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1240" y="276" key="run.anything.popup/-2560.-349.1707.940/0.0.1920.1050@0.0.1920.1050" timestamp="1621769027499" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/template/index.html.twig</url>
+          <line>41</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/template/index.html.twig</url>
+          <line>34</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

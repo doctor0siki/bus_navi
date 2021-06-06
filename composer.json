@@ -1,0 +1,20 @@
+{
+  "name": "vendor_name/bus_navi",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "docto",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "guzzle/guzzle": "^3.9",
+    "guzzlehttp/guzzle": "^7.3",
+    "ext-json": "*",
+    "ext-simplexml": "*",
+    "ext-dom": "*",
+    "twig/twig": "^3.3"
+  }
+}

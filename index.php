@@ -37,6 +37,11 @@ class getTime
     const BUS_RIDE = 8;
 
     /**
+     *　到着時刻がこの時刻になったら遅刻という文字を追記 ex 8:10 →　810
+     */
+    const TIME_LIMIT = 815;
+
+    /**
      * @var string
      */
     private $html;
@@ -212,8 +217,14 @@ class getTime
                     $result[$key]["text"] = "-";
                     break;
             }
+
+            //8:15過ぎているなら遅刻
+            if ((int)str_replace(":", "", $value["arrival"]) > self::TIME_LIMIT) {
+                $result[$key]["text"] = "<b style='color: red'>【遅刻】</b>" . $result[$key]["text"];
+            }
         }
 
+        //バスなびURLをセット
         $result["uri"] = $this->uri;
 
         return $result;

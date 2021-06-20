@@ -5,6 +5,9 @@ require_once('simple_html_dom.php');
 use \GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
 use Twig\Loader\FilesystemLoader;
 
 /**
@@ -25,7 +28,6 @@ class getTime
     /**
      * @var string
      */
-
     private $html;
 
     /**
@@ -34,12 +36,19 @@ class getTime
     private $twig;
 
     /**
-     * getTime constructor.
+     * @var bool
      */
-    public function __construct()
+    private $render;
+
+    /**
+     * getTime constructor.
+     * @param bool $render
+     */
+    public function __construct($render = true)
     {
         $loader = new FilesystemLoader(__DIR__ . '/template');
         $this->twig = new Environment($loader);
+        $this->render = $render;
     }
 
     /**
@@ -66,9 +75,16 @@ class getTime
     public function __invoke()
     {
         try {
+
             //get html
             $this->getHTML();
-            $this->renderHtml($this->getTimeFromHtml());
+            //get time
+            $result = $this->getTimeFromHtml();
+            if ($this->render) {
+                $this->renderHtml($result);
+            } else {
+                echo json_encode($result);
+            }
 
         } catch (Exception $e) {
             print "なにか問題発生" . $e->getMessage();
@@ -90,9 +106,9 @@ class getTime
             $data["bus_info"] = $bus_info;
             echo $this->twig->render('index.html.twig', $data);
 
-        } catch (\Twig\Error\LoaderError $e) {
-        } catch (\Twig\Error\RuntimeError $e) {
-        } catch (\Twig\Error\SyntaxError $e) {
+        } catch (LoaderError $e) {
+        } catch (RuntimeError $e) {
+        } catch (SyntaxError $e) {
         }
     }
 
@@ -146,15 +162,39 @@ class getTime
                 }
             }
         }
+
         //昇順ソートする
         sort($result);
+
+        //残り時間によってメッセージを切り替える
+        foreach ($result as $key => $value) {
+            switch (true) {
+                case $value["time"] <= 5:
+                    $result[$key]["text"] = "次のバスを待ちましょう";
+                    break;
+                case $value["time"] <= 8:
+                    $result[$key]["text"] = "そろそろ家を出ましょう";
+                    break;
+                case $value["time"] <= 13:
+                    $result[$key]["text"] = "PASMO/マスク/ハンカチ/ティッシュ/水筒/健康観察表";
+                    break;
+            }
+        }
 
         return $result;
     }
 }
 
+//最初はレンダリングする
+$render = true;
+
+//API経由の場合はレンダリングしない
+if ($_GET["api"] == 1) {
+    $render = false;
+}
+
 //instance
-$getTime = new getTime();
+$getTime = new getTime($render);
 
 //invoke
 $getTime();

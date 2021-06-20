@@ -50,10 +50,12 @@ class getTime
      * @var bool
      */
     private $render;
+
     /**
      * @var string[]
      */
     private $params;
+
     /**
      * @var string
      */
@@ -181,8 +183,7 @@ class getTime
                     $departure_time = date("H:i", strtotime($time_int . 'min'));
                     $arrival_time = date("H:i", strtotime(($time_int + self::WALK_TO_SCHOOL + self::BUS_RIDE) . ' min'));
                     $result[] = array("time" => $time_int, "departure" => $departure_time, "arrival" => $arrival_time);
-                } elseif
-                ($tmp and strstr($tmp, "発車待ち")) {
+                } elseif ($tmp and strstr($tmp, "発車待ち")) {
                     //残り時間は15分
                     $time_int = 15;
                     $departure_time = date("H:i", strtotime($time_int . 'min'));
@@ -206,6 +207,9 @@ class getTime
                     break;
                 case $value["time"] <= self::WALK_TO_BUS_STOP + 8:
                     $result[$key]["text"] = "PASMO/マスク/ハンカチ/ティッシュ/水筒/健康観察表";
+                    break;
+                default:
+                    $result[$key]["text"] = "-";
                     break;
             }
         }

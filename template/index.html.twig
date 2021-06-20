@@ -83,13 +83,11 @@
             <td nowrap="true" class="big_green_text text-center align-middle" id="min_left">{{ bus_info[0].time }}分</td>
             <td class="orange_header text-left　align-middle" id="note">{{ bus_info[0].text }}</td>
         </tr>
-        <tr id="bus_next">
-            {% if bus_info[1] %}
+        <tr id="bus_next" style="display: {% if bus_info[1] == null %}none{% endif %}">
                 <td class="orange_text text-center align-middle" id="next_departure">{{ bus_info[1].departure }}</td>
                 <td class="orange_text  text-center align-middle" id="next_arrival">{{ bus_info[1].arrival }}</td>
                 <td class="green_text text-center align-middle" id="next_min_left">{{ bus_info[1].time }}分</td>
                 <td class="orange_header text-left align-middle" id="next_note">{{ bus_info[1].text }}</td>
-            {% endif %}
         </tr>
         </tbody>
     </table>

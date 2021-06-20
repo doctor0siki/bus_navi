@@ -16,6 +16,17 @@ use Twig\Loader\FilesystemLoader;
 class getTime
 {
     /**
+     * バスナビのベースURL
+     */
+
+    const BASE_URL = 'https://tokyu.bus-location.jp/blsys/';
+
+    /**
+     * WALK_TO_BUS_STOP　自宅最寄りバス停までの徒歩時間
+     */
+    const WALK_TO_BUS_STOP = 6;
+
+    /**
      * WALK_TO_SCHOOL　バス下車後学校までの徒歩時間
      */
     const WALK_TO_SCHOOL = 5;
@@ -39,6 +50,14 @@ class getTime
      * @var bool
      */
     private $render;
+    /**
+     * @var string[]
+     */
+    private $params;
+    /**
+     * @var string
+     */
+    private $uri;
 
     /**
      * getTime constructor.
@@ -49,6 +68,16 @@ class getTime
         $loader = new FilesystemLoader(__DIR__ . '/template');
         $this->twig = new Environment($loader);
         $this->render = $render;
+        $this->params = ["VID" => "rsl",
+            "EID" => "nt",
+            "PRM" => "",
+            "SCT" => "1",
+            "DSMK" => "2427",
+            "ASMK" => "0",
+            "ASN" => "null",
+            "FDSN" => "0",
+            "FASN" => "0",
+            "RAMK" => "1"];
     }
 
     /**
@@ -57,14 +86,14 @@ class getTime
 
     private function getHTML()
     {
-
         $client = new Client([
-            'base_uri' => 'https://tokyu.bus-location.jp/blsys/',
+            'base_uri' => self::BASE_URL,
         ]);
         $method = 'GET';
-        $uri = 'navis?VID=rsl&EID=nt&PRM=&SCT=1&DSMK=2427&DSN=%E4%B8%96%E7%94%B0%E8%B0%B7%E8%AD%A6%E5%AF%9F%E7%BD%B2%E5%89%8D&ASMK=0&ASN=null&FDSN=0&FASN=0&RAMK=1';
+        $url = "navis?" . http_build_query($this->params);
         $options = ['verify' => false];
-        $response = $client->request($method, $uri, $options);
+        $response = $client->request($method, $url, $options);
+        $this->uri = self::BASE_URL . $url;
         $this->html = $response->getBody()->getContents();
     }
 
@@ -169,17 +198,19 @@ class getTime
         //残り時間によってメッセージを切り替える
         foreach ($result as $key => $value) {
             switch (true) {
-                case $value["time"] <= 5:
+                case $value["time"] <= self::WALK_TO_BUS_STOP:
                     $result[$key]["text"] = "次のバスを待ちましょう";
                     break;
-                case $value["time"] <= 8:
+                case $value["time"] <= self::WALK_TO_BUS_STOP + 3:
                     $result[$key]["text"] = "そろそろ家を出ましょう";
                     break;
-                case $value["time"] <= 13:
+                case $value["time"] <= self::WALK_TO_BUS_STOP + 8:
                     $result[$key]["text"] = "PASMO/マスク/ハンカチ/ティッシュ/水筒/健康観察表";
                     break;
             }
         }
+
+        $result["uri"] = $this->uri;
 
         return $result;
     }

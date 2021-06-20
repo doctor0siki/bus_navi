@@ -14,6 +14,11 @@ $(function () {
                 $("#arrival").html(data[0].arrival);
                 $("#min_left").html(data[0].time + "分");
                 $("#note").html(data[0].text);
+            } else {
+                $("#departure").html("--:--");
+                $("#arrival").html("--:--");
+                $("#min_left").html("-");
+                $("#note").html("しばらくバスは来ません");
             }
 
             if (data[1] !== undefined) {

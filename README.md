@@ -8,3 +8,10 @@
 # builtin server
 
 php -S localhost:8000
+
+# how to install
+
+```
+composer isntall
+```
+

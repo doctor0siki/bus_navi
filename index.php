@@ -42,6 +42,11 @@ class getTime
     const TIME_LIMIT = 815;
 
     /**
+     * 終点の名前をセットする
+     */
+    const LAST_BUS_STOP = "弦巻営";
+
+    /**
      * @var string
      */
     private $html;
@@ -180,10 +185,10 @@ class getTime
                 $tmp = strip_tags($val);
                 if ($tmp and strstr($tmp, "分待ち")) {
                     //残り時間を計測
-                    if (strstr($tmp, "弦巻営行")) {
-                        $time_int = (int)str_replace("弦巻営行", "", $tmp);
-                    } elseif (strstr($tmp, "終)弦巻営行")) {
-                        $time_int = (int)str_replace("終)弦巻営行", "", $tmp);
+                    if (strstr($tmp, self::LAST_BUS_STOP . "行")) {
+                        $time_int = (int)str_replace(self::LAST_BUS_STOP . "行", "", $tmp);
+                    } elseif (strstr($tmp, "終)" . self::LAST_BUS_STOP . "行")) {
+                        $time_int = (int)str_replace("終)" . self::LAST_BUS_STOP . "行", "", $tmp);
                     }
                     $departure_time = date("H:i", strtotime($time_int . 'min'));
                     $arrival_time = date("H:i", strtotime(($time_int + self::WALK_TO_SCHOOL + self::BUS_RIDE) . ' min'));

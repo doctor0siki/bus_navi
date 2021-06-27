@@ -9,42 +9,13 @@ use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
 use Twig\Loader\FilesystemLoader;
+use Dotenv\Dotenv;
 
 /**
  * Class getTime
  */
 class getTime
 {
-    /**
-     * バスナビのベースURL
-     */
-
-    const BASE_URL = 'https://tokyu.bus-location.jp/blsys/';
-
-    /**
-     * WALK_TO_BUS_STOP　自宅最寄りバス停までの徒歩時間
-     */
-    const WALK_TO_BUS_STOP = 6;
-
-    /**
-     * WALK_TO_SCHOOL　バス下車後学校までの徒歩時間
-     */
-    const WALK_TO_SCHOOL = 5;
-
-    /**
-     * BUS_RIDE バス乗車時間
-     */
-    const BUS_RIDE = 8;
-
-    /**
-     *　到着時刻がこの時刻になったら遅刻という文字を追記 ex 8:10 →　810
-     */
-    const TIME_LIMIT = 815;
-
-    /**
-     * 終点の名前をセットする
-     */
-    const LAST_BUS_STOP = "弦巻営";
 
     /**
      * @var string
@@ -62,11 +33,6 @@ class getTime
     private $render;
 
     /**
-     * @var string[]
-     */
-    private $params;
-
-    /**
      * @var string
      */
     private $uri;
@@ -80,16 +46,6 @@ class getTime
         $loader = new FilesystemLoader(__DIR__ . '/template');
         $this->twig = new Environment($loader);
         $this->render = $render;
-        $this->params = ["VID" => "rsl",
-            "EID" => "nt",
-            "PRM" => "",
-            "SCT" => "1",
-            "DSMK" => "2427",
-            "ASMK" => "0",
-            "ASN" => "null",
-            "FDSN" => "0",
-            "FASN" => "0",
-            "RAMK" => "1"];
     }
 
     /**
@@ -99,13 +55,12 @@ class getTime
     private function getHTML()
     {
         $client = new Client([
-            'base_uri' => self::BASE_URL,
+            'base_uri' => $_ENV["BASE_URL"],
         ]);
         $method = 'GET';
-        $url = "navis?" . http_build_query($this->params);
         $options = ['verify' => false];
-        $response = $client->request($method, $url, $options);
-        $this->uri = self::BASE_URL . $url;
+        $response = $client->request($method, "", $options);
+        $this->uri = $_ENV["BASE_URL"];
         $this->html = $response->getBody()->getContents();
     }
 
@@ -173,7 +128,7 @@ class getTime
                 //結果を生成
 
                 $departure_time = date("H:i", strtotime($time_int . 'min'));
-                $arrival_time = date("H:i", strtotime(($time_int + self::WALK_TO_SCHOOL + self::BUS_RIDE) . ' min'));
+                $arrival_time = date("H:i", strtotime(($time_int + $_ENV["WALK_TO_SCHOOL"] + $_ENV["BUS_RIDE"]) . ' min'));
 
                 $result[] = array("time" => $time_int, "departure" => $departure_time, "arrival" => $arrival_time);
             }
@@ -185,19 +140,19 @@ class getTime
                 $tmp = strip_tags($val);
                 if ($tmp and strstr($tmp, "分待ち")) {
                     //残り時間を計測
-                    if (strstr($tmp, self::LAST_BUS_STOP . "行")) {
-                        $time_int = (int)str_replace(self::LAST_BUS_STOP . "行", "", $tmp);
-                    } elseif (strstr($tmp, "終)" . self::LAST_BUS_STOP . "行")) {
-                        $time_int = (int)str_replace("終)" . self::LAST_BUS_STOP . "行", "", $tmp);
+                    if (strstr($tmp, $_ENV["LAST_BUS_STOP"] . "行")) {
+                        $time_int = (int)str_replace($_ENV["LAST_BUS_STOP"] . "行", "", $tmp);
+                    } elseif (strstr($tmp, "終)" . $_ENV["LAST_BUS_STOP"] . "行")) {
+                        $time_int = (int)str_replace("終)" . $_ENV["LAST_BUS_STOP"] . "行", "", $tmp);
                     }
                     $departure_time = date("H:i", strtotime($time_int . 'min'));
-                    $arrival_time = date("H:i", strtotime(($time_int + self::WALK_TO_SCHOOL + self::BUS_RIDE) . ' min'));
+                    $arrival_time = date("H:i", strtotime(($time_int + $_ENV["WALK_TO_SCHOOL"] + $_ENV["BUS_RIDE"]) . ' min'));
                     $result[] = array("time" => $time_int, "departure" => $departure_time, "arrival" => $arrival_time);
                 } elseif ($tmp and strstr($tmp, "発車待ち")) {
                     //残り時間は15分
                     $time_int = 15;
                     $departure_time = date("H:i", strtotime($time_int . 'min'));
-                    $arrival_time = date("H:i", strtotime(($time_int + self::WALK_TO_SCHOOL + self::BUS_RIDE) . ' min'));
+                    $arrival_time = date("H:i", strtotime(($time_int + $_ENV["WALK_TO_SCHOOL"] + $_ENV["BUS_RIDE"]) . ' min'));
                     $result[] = array("time" => $time_int, "departure" => $departure_time, "arrival" => $arrival_time);
                 }
             }
@@ -209,14 +164,14 @@ class getTime
         //残り時間によってメッセージを切り替える
         foreach ($result as $key => $value) {
             switch (true) {
-                case $value["time"] <= self::WALK_TO_BUS_STOP:
-                    $result[$key]["text"] = "次のバスを待ちましょう";
+                case $value["time"] <= $_ENV["WALK_TO_BUS_STOP"]:
+                    $result[$key]["text"] = $_ENV["WARNING_NEXT_BUS"];
                     break;
-                case $value["time"] <= self::WALK_TO_BUS_STOP + 3:
-                    $result[$key]["text"] = "そろそろ家を出ましょう";
+                case $value["time"] <= $_ENV["WALK_TO_BUS_STOP"] + 3:
+                    $result[$key]["text"] = $_ENV["WARNING_LEAVE_HOME"];
                     break;
-                case $value["time"] <= self::WALK_TO_BUS_STOP + 8:
-                    $result[$key]["text"] = "PASMO/マスク/ハンカチ/ティッシュ/水筒/健康観察表";
+                case $value["time"] <= $_ENV["WALK_TO_BUS_STOP"] + 8:
+                    $result[$key]["text"] = $_ENV["WARNING_WITH_BELONGINGS"];
                     break;
                 default:
                     $result[$key]["text"] = "-";
@@ -224,7 +179,7 @@ class getTime
             }
 
             //8:15過ぎているなら遅刻
-            if ((int)str_replace(":", "", $value["arrival"]) > self::TIME_LIMIT) {
+            if ((int)str_replace(":", "", $value["arrival"]) > $_ENV["TIME_LIMIT"]) {
                 $result[$key]["text"] = "<b style='color: red'>【遅刻】</b>" . $result[$key]["text"];
             }
         }
@@ -235,6 +190,11 @@ class getTime
         return $result;
     }
 }
+
+
+//.envを読む
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 //最初はレンダリングする
 $render = true;

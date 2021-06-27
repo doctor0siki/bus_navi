@@ -14,6 +14,7 @@
     "ext-json": "*",
     "ext-simplexml": "*",
     "ext-dom": "*",
-    "twig/twig": "^3.3"
+    "twig/twig": "^3.3",
+    "vlucas/phpdotenv": "^5.3"
   }
 }

@@ -1,0 +1,38 @@
+body {
+    background-color: black;
+}
+
+.green_text {
+    color: #2a722a;
+    font-size: 60px;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+.big_green_text {
+    color: #2a722a;
+    font-size: 180px;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+.orange_text {
+    color: orange;
+    font-size: 60px;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+.orange_header {
+    color: orange;
+    font-size: 40px;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+a {
+    font-size: 10px;
+    color: #fff;
+    background: #5876a3;
+    padding: 10px 30px;
+    display: inline-block;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'DotGothic16', sans-serif;
+}

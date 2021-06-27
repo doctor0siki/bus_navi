@@ -10,11 +10,16 @@
     }
   ],
   "require": {
-    "guzzlehttp/guzzle": "^7.3",
+    "guzzlehttp/guzzle": "*",
     "ext-json": "*",
     "ext-simplexml": "*",
     "ext-dom": "*",
-    "twig/twig": "^3.3",
-    "vlucas/phpdotenv": "^5.3"
+    "twig/twig": "*",
+    "vlucas/phpdotenv": "*"
+  },
+  "config": {
+    "platform": {
+      "php": "7.1.2"
+    }
   }
 }

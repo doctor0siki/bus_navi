@@ -15,3 +15,5 @@ php -S localhost:8000
 composer isntall
 ```
 
+その後.env.exampleを.envにリネームしてください
+

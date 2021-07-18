@@ -1,6 +1,5 @@
 <?php
 require('vendor/autoload.php');
-require_once('simple_html_dom.php');
 
 use \GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
@@ -116,45 +115,18 @@ class getTime
     {
         $result = [];
 
-        // HTMLをオブジェクト化
-        $html_obj = str_get_html($this->html);
+        //取得してみる
+        preg_match_all("/[0-9]{1,2}分待ち/", strip_tags($this->html), $matches);
 
-        // 下記の記述方法と同じ
-        foreach ($html_obj->find("[class=waittm]") as $val) {
-            $tmp = strip_tags($val);
-            if ($tmp) {
+        //ループして数値だけ取る
+        foreach ($matches[0] as $val) {
+            if ($val) {
                 //残り時間を計測
-                $time_int = (int)str_replace("分待ち", "", $tmp);
+                $time_int = (int)str_replace("分待ち", "", $val);
                 //結果を生成
-
                 $departure_time = date("H:i", strtotime($time_int . 'min'));
                 $arrival_time = date("H:i", strtotime(($time_int + $_ENV["WALK_TO_SCHOOL"] + $_ENV["BUS_RIDE"]) . ' min'));
-
                 $result[] = array("time" => $time_int, "departure" => $departure_time, "arrival" => $arrival_time);
-            }
-        }
-        //↑で取れなかったら
-        if (!count($result)) {
-            //発車待ちも見てみる
-            foreach ($html_obj->find("[class=label-d]") as $val) {
-                $tmp = strip_tags($val);
-                if ($tmp and strstr($tmp, "分待ち")) {
-                    //残り時間を計測
-                    if (strstr($tmp, $_ENV["LAST_BUS_STOP"] . "行")) {
-                        $time_int = (int)str_replace($_ENV["LAST_BUS_STOP"] . "行", "", $tmp);
-                    } elseif (strstr($tmp, "終)" . $_ENV["LAST_BUS_STOP"] . "行")) {
-                        $time_int = (int)str_replace("終)" . $_ENV["LAST_BUS_STOP"] . "行", "", $tmp);
-                    }
-                    $departure_time = date("H:i", strtotime($time_int . 'min'));
-                    $arrival_time = date("H:i", strtotime(($time_int + $_ENV["WALK_TO_SCHOOL"] + $_ENV["BUS_RIDE"]) . ' min'));
-                    $result[] = array("time" => $time_int, "departure" => $departure_time, "arrival" => $arrival_time);
-                } elseif ($tmp and strstr($tmp, "発車待ち")) {
-                    //残り時間は15分
-                    $time_int = 15;
-                    $departure_time = date("H:i", strtotime($time_int . 'min'));
-                    $arrival_time = date("H:i", strtotime(($time_int + $_ENV["WALK_TO_SCHOOL"] + $_ENV["BUS_RIDE"]) . ' min'));
-                    $result[] = array("time" => $time_int, "departure" => $departure_time, "arrival" => $arrival_time);
-                }
             }
         }
 

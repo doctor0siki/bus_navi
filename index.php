@@ -115,8 +115,11 @@ class getTime
     {
         $result = [];
 
+        //発車待ちを16分待ちに変更する
+        $html_data = str_replace("発車待ち", $_ENV["BUS_DEPARTURE_FROM_TERMINAL_TIME"] . "分待ち", strip_tags($this->html));
+
         //取得してみる
-        preg_match_all("/[0-9]{1,2}分待ち/", strip_tags($this->html), $matches);
+        preg_match_all("/[0-9]{1,2}分待ち/", $html_data, $matches);
 
         //ループして数値だけ取る
         foreach ($matches[0] as $val) {

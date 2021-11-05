@@ -17,3 +17,6 @@ composer install
 
 その後.env.exampleを.envにリネームしてください
 
+# 経緯その他は以下をどうぞ
+
+https://eh-career.com/engineerhub/entry/2021/09/24/110000

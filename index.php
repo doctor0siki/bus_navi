@@ -139,6 +139,7 @@ class getTime
         //残り時間によってメッセージを切り替える
         foreach ($result as $key => $value) {
             switch (true) {
+
                 case $value["time"] <= $_ENV["WALK_TO_BUS_STOP"]:
                     $result[$key]["text"] = $_ENV["WARNING_NEXT_BUS"];
                     break;
@@ -150,6 +151,21 @@ class getTime
                     break;
                 default:
                     $result[$key]["text"] = "-";
+                    break;
+            }
+
+            switch (true) {
+                case $value["time"] == 15:
+                    $result[$key]["sound"] = "15min.mp3";
+                    break;
+                case $value["time"] == 10:
+                    $result[$key]["sound"] = "10min.mp3";
+                    break;
+                case $value["time"] == 6:
+                    $result[$key]["sound"] = "waitnext.mp3";
+                    break;
+                default:
+                    $result[$key]["sound"] = "";
                     break;
             }
 

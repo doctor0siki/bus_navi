@@ -10,10 +10,19 @@ $(function () {
             }
 
             if (data[0] !== undefined) {
+
                 $("#departure").html(data[0].departure);
                 $("#arrival").html(data[0].arrival);
                 $("#min_left").html(data[0].time + "分");
                 $("#note").html(data[0].text);
+
+                if (data[0].sound !== undefined) {
+                    let audioElem;
+                    audioElem = new Audio();
+                    audioElem.src = "../sound/" + data[0].sound;
+                    audioElem.play();
+                }
+
             } else {
                 $("#departure").html("--:--");
                 $("#arrival").html("--:--");

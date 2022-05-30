@@ -12,7 +12,7 @@ php -S localhost:8000
 # how to install
 
 ```
-composer isntall
+composer install
 ```
 
 その後.env.exampleを.envにリネームしてください

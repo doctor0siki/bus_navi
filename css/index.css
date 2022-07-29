@@ -10,19 +10,19 @@ body {
 
 .big_green_text {
     color: #2a722a;
-    font-size: 180px;
+    font-size: 90px;
     font-family: 'DotGothic16', sans-serif;
 }
 
 .orange_text {
     color: orange;
-    font-size: 60px;
+    font-size: 50px;
     font-family: 'DotGothic16', sans-serif;
 }
 
 .orange_header {
     color: orange;
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'DotGothic16', sans-serif;
 }
 

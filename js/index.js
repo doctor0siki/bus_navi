@@ -16,13 +16,6 @@ $(function () {
                 $("#min_left").html(data[0].time + "分");
                 $("#note").html(data[0].text);
 
-                if (data[0].sound !== undefined) {
-                    let audioElem;
-                    audioElem = new Audio();
-                    audioElem.src = "../sound/" + data[0].sound;
-                    audioElem.play();
-                }
-
             } else {
                 $("#departure").html("--:--");
                 $("#arrival").html("--:--");
@@ -35,6 +28,13 @@ $(function () {
                 $("#next_arrival").html(data[1].arrival);
                 $("#next_min_left").html(data[1].time + "分");
                 $("#next_note").html(data[1].text);
+            }
+
+            if (data[2] !== undefined) {
+                $("#next_departure").html(data[2].departure);
+                $("#next_arrival").html(data[2].arrival);
+                $("#next_min_left").html(data[2].time + "分");
+                $("#next_note").html(data[2].text);
             }
         });
     }, 15000);

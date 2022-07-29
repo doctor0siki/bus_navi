@@ -153,22 +153,6 @@ class getTime
                     $result[$key]["text"] = "-";
                     break;
             }
-
-            switch (true) {
-                case $value["time"] == 15:
-                    $result[$key]["sound"] = "15min.mp3";
-                    break;
-                case $value["time"] == 10:
-                    $result[$key]["sound"] = "10min.mp3";
-                    break;
-                case $value["time"] == 6:
-                    $result[$key]["sound"] = "waitnext.mp3";
-                    break;
-                default:
-                    $result[$key]["sound"] = "";
-                    break;
-            }
-
             //8:15過ぎているなら遅刻
             if ((int)str_replace(":", "", $value["arrival"]) > $_ENV["TIME_LIMIT"]) {
                 $result[$key]["text"] = "<b style='color: red'>【遅刻】</b>" . $result[$key]["text"];
